@@ -10,6 +10,9 @@ import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import com.BV.LinearGradient.LinearGradientPackage; // <--- This!
+import com.reactnativecommunity.picker.RNCPickerPackage;
+
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -24,6 +27,8 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
           @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
+          new RNCPickerPackage();
+          new LinearGradientPackage(); // <---- and This!
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
           return packages;
